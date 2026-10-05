@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - EyeVerse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-eye"></i>
+                <span>EyeVerse</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/help" class="active">Help</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1><i class="fas fa-question-circle"></i> How to Use EyeVerse</h1>
+            <p class="subtitle">Step-by-step guide to analyzing retinal images</p>
+        </div>
+    </section>
+
+    <section class="upload-section">
+        <div class="container">
+            <div class="upload-card">
+                <h2><i class="fas fa-book"></i> User Guide</h2>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: #2563eb;"><i class="fas fa-step-forward"></i> Step 1: Prepare Your Image</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        Make sure you have a retinal fundus image ready:
+                    </p>
+                    <ul style="line-height: 2; margin-left: 2rem;">
+                        <li>Image format: JPG or PNG</li>
+                        <li>File size: Maximum 16MB</li>
+                        <li>Image should be clear and well-lit</li>
+                        <li>Retina should be centered in the image</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: #2563eb;"><i class="fas fa-cloud-upload-alt"></i> Step 2: Upload Image</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        You can upload your image in two ways:
+                    </p>
+                    <ul style="line-height: 2; margin-left: 2rem;">
+                        <li><strong>Click to Browse:</strong> Click on the upload area and select your image file</li>
+                        <li><strong>Drag and Drop:</strong> Drag your image file directly into the upload area</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: #2563eb;"><i class="fas fa-microscope"></i> Step 3: Analyze</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        After uploading, you'll see a preview of your image:
+                    </p>
+                    <ul style="line-height: 2; margin-left: 2rem;">
+                        <li>Review the image preview</li>
+                        <li>Click the "Analyze Image" button</li>
+                        <li>Wait a few seconds for AI analysis (usually < 5 seconds)</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: #2563eb;"><i class="fas fa-file-medical"></i> Step 4: View Results</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        The results page will show:
+                    </p>
+                    <ul style="line-height: 2; margin-left: 2rem;">
+                        <li><strong>Diagnosis:</strong> DR severity level (No DR, Mild, Moderate, Severe, or Proliferative)</li>
+                        <li><strong>Confidence:</strong> How confident the AI is in its prediction</li>
+                        <li><strong>Probabilities:</strong> Likelihood for each class</li>
+                        <li><strong>Recommendations:</strong> Clinical actions based on the diagnosis</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: #2563eb;"><i class="fas fa-download"></i> Step 5: Download Report</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        You can download a detailed text report containing:
+                    </p>
+                    <ul style="line-height: 2; margin-left: 2rem;">
+                        <li>Complete diagnosis and findings</li>
+                        <li>All probability scores</li>
+                        <li>Clinical recommendations</li>
+                        <li>Timestamp of analysis</li>
+                    </ul>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        Click the "Download Report" button to save the report as a text file.
+                    </p>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+
+                <h2><i class="fas fa-info-circle"></i> Understanding Results</h2>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #28a745;">Class 0: No DR</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        No signs of diabetic retinopathy detected. Retina appears healthy.
+                        Regular annual screening recommended.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #ffc107;">Class 1: Mild DR</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        Early stage with few microaneurysms. Requires monitoring every 6-12 months.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #fd7e14;">Class 2: Moderate DR</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        More pronounced symptoms with multiple lesions. Monitoring every 3-6 months.
+                        Consider specialist referral.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #dc3545;">Class 3: Severe DR</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        Advanced stage with extensive damage. IMMEDIATE specialist consultation required.
+                        High risk of vision loss.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #721c24;">Class 4: Proliferative DR</h3>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        Most severe stage with new blood vessel formation. EMERGENCY medical attention needed.
+                        Risk of blindness without immediate treatment.
+                    </p>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+
+                <h2><i class="fas fa-question"></i> Frequently Asked Questions</h2>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q: How accurate is the system?</h4>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        The system achieves 78-85% accuracy on test data. However, it should be used as a screening 
+                        tool only. Final diagnosis must be confirmed by a qualified ophthalmologist.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q: What image formats are supported?</h4>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        JPG and PNG formats are supported. Maximum file size is 16MB.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q: Is my data stored?</h4>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        Uploaded images are temporarily stored during analysis and can be deleted after use.
+                        No personal health information is collected.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q: Can I use this for medical diagnosis?</h4>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        <strong>NO.</strong> This system is for educational purposes only. It is NOT a replacement 
+                        for professional medical diagnosis. Always consult with a qualified healthcare provider.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q: What should I do if I get a high-risk result?</h4>
+                    <p style="line-height: 1.8; margin-left: 1rem;">
+                        If the system indicates Severe or Proliferative DR, seek immediate consultation with an 
+                        ophthalmologist. Do not delay medical care based on these results.
+                    </p>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+
+                <div style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1.5rem; border-radius: 8px;">
+                    <h3 style="color: #f59e0b;"><i class="fas fa-exclamation-triangle"></i> Important Medical Disclaimer</h3>
+                    <p style="line-height: 1.8; margin: 0;">
+                        This AI system is developed for <strong>educational purposes</strong> as part of a university 
+                        deep learning course project. It is <strong>NOT FDA-approved</strong> and should <strong>NOT</strong> 
+                        be used for actual medical diagnosis or treatment decisions. All predictions must be verified 
+                        by licensed healthcare professionals. The developers assume no responsibility for medical 
+                        decisions made based on this system's output.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 EyeVerse | Air University Islamabad | Semester Project</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

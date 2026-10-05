@@ -1,0 +1,133 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - EyeVerse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-eye"></i>
+                <span>EyeVerse</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about" class="active">About</a>
+                <a href="/help">Help</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1><i class="fas fa-info-circle"></i> About EyeVerse</h1>
+            <p class="subtitle">AI-Powered Diabetic Retinopathy Detection System</p>
+        </div>
+    </section>
+
+    <section class="upload-section">
+        <div class="container">
+            <div class="upload-card">
+
+                <h2>Project Overview</h2>
+                <p style="line-height: 1.8; margin-bottom: 1.5rem;">
+                    <strong>EyeVerse</strong> is an AI-based medical imaging system designed to detect and classify
+                    Diabetic Retinopathy (DR) from retinal fundus images. The system uses deep learning
+                    to provide instant, accurate diagnosis and generates comprehensive medical reports.
+                </p>
+
+                <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                <ul style="line-height: 2; margin-bottom: 1.5rem;">
+                    <li><strong>Course:</strong> AI Project Design and Development </li>
+                    <li><strong>Institution:</strong> Air University, Islamabad</li>
+                    <li><strong>Faculty:</strong> Faculty of Computing &amp; AI</li>
+                    <li><strong>Department:</strong> Department of Creative Technologies</li>
+                    <li><strong>Teacher:</strong> Farhan Zafar</li>
+                    <li><strong>Student / Developer:</strong> Talha Iqbal</li>
+                    <li><strong>Student ID:</strong> 231223</li>
+                </ul>
+
+                <h3><i class="fas fa-cogs"></i> Technical Stack</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="background: #f9fafb; padding: 1rem; border-radius: 8px;">
+                        <strong>Deep Learning</strong><br>
+                        PyTorch, ResNet50
+                    </div>
+
+                    <div style="background: #f9fafb; padding: 1rem; border-radius: 8px;">
+                        <strong>Backend</strong><br>
+                        Flask, Python
+                    </div>
+
+                    <div style="background: #f9fafb; padding: 1rem; border-radius: 8px;">
+                        <strong>Frontend</strong><br>
+                        HTML5, CSS3, JavaScript
+                    </div>
+
+                    <div style="background: #f9fafb; padding: 1rem; border-radius: 8px;">
+                        <strong>Dataset</strong><br>
+                        APTOS 2019 (3,662 images)
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-chart-line"></i> Model Performance</h3>
+                <ul style="line-height: 2; margin-bottom: 1.5rem;">
+                    <li><strong>Test Accuracy:</strong> 78-85%</li>
+                    <li><strong>F1-Score:</strong> 0.75-0.80</li>
+                    <li><strong>Training Time:</strong> ~30 minutes (GPU)</li>
+                    <li><strong>Classes:</strong> 5 (No DR, Mild, Moderate, Severe, Proliferative)</li>
+                </ul>
+
+                <h3><i class="fas fa-bullseye"></i> Project Goals</h3>
+                <ul style="line-height: 2; margin-bottom: 1.5rem;">
+                    <li>Automated detection of diabetic retinopathy from retinal images</li>
+                    <li>Multi-class classification (5 severity levels)</li>
+                    <li>Real-time prediction with confidence scores</li>
+                    <li>Automated diagnostic report generation</li>
+                    <li>User-friendly web interface for accessibility</li>
+                </ul>
+
+                <h3><i class="fas fa-database"></i> Dataset Information</h3>
+                <p style="line-height: 1.8; margin-bottom: 1.5rem;">
+                    The model is trained on the <strong>APTOS 2019 Blindness Detection</strong> dataset from Kaggle,
+                    containing 3,662 high-quality retinal fundus images labeled with DR severity levels (0-4).
+                </p>
+
+                <h3><i class="fas fa-flask"></i> Methodology</h3>
+                <ol style="line-height: 2; margin-bottom: 1.5rem;">
+                    <li><strong>Data Preparation:</strong> Image preprocessing, augmentation, and normalization</li>
+                    <li><strong>Model Architecture:</strong> ResNet50 with transfer learning</li>
+                    <li><strong>Training:</strong> 50 epochs with Adam optimizer</li>
+                    <li><strong>Evaluation:</strong> Accuracy, F1-score, confusion matrix</li>
+                    <li><strong>Deployment:</strong> Flask web application</li>
+                </ol>
+
+                <h3><i class="fas fa-exclamation-triangle"></i> Disclaimer</h3>
+                <div style="background: #fef3c7; border: 1px solid #fbbf24; padding: 1rem; border-radius: 8px;">
+                    <p style="margin: 0;">
+                        <strong>Important:</strong> This system is developed for educational purposes as part of
+                        an AI Project Design and Development course project. It should NOT be used as a substitute
+                        for professional medical diagnosis. All results must be verified by qualified ophthalmologists.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 EyeVerse | Air University Islamabad | Individual Project</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+```

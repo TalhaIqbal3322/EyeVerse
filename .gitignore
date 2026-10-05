@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+aipdd_env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Model weights
+*.pt
+*.onnx
+*.h5
+*.pth
+
+# Data
+data/raw/*
+data/processed/*
+
+# Logs
+logs/*
+
+# Uploaded files
+uploads/*
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
